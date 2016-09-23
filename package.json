@@ -4,9 +4,19 @@
   "description": "A website for the Diversity Research Symposium, held annually on college campuses around Indiana.",
   "main": "index.js",
   "dependencies": {},
-  "devDependencies": {},
+  "devDependencies": {
+    "babel-preset-es2015": "^6.14.0",
+    "gulp-babel": "^6.1.2",
+    "gulp-concat": "^2.6.0",
+    "gulp-connect": "^5.0.0",
+    "gulp-order": "^1.1.1",
+    "gulp-plumber": "^1.1.0",
+    "gulp-sourcemaps": "^1.6.0"
+  },
   "scripts": {
-    "start": "npm app.js",
+    "start": "gulp",
+    "prestart": "npm install",
+    "postinstall": "bower install",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -22,7 +32,7 @@
     "State"
   ],
   "author": "Matheu DeWitt, Jennifer Milharcic, Cody Johnson",
-  "license": "ISC",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/msdewitt/DRSWebsiteCS495/issues"
   },
