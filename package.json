@@ -1,0 +1,30 @@
+{
+  "name": "diversitysymposiumproject",
+  "version": "1.0.0",
+  "description": "A website for the Diversity Research Symposium, held annually on college campuses around Indiana.",
+  "main": "index.js",
+  "dependencies": {},
+  "devDependencies": {},
+  "scripts": {
+    "start": "npm app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/msdewitt/DRSWebsiteCS495.git"
+  },
+  "keywords": [
+    "Diversity",
+    "Reasearch",
+    "Symposium",
+    "Capstone",
+    "Ball",
+    "State"
+  ],
+  "author": "Matheu DeWitt, Jennifer Milharcic, Cody Johnson",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/msdewitt/DRSWebsiteCS495/issues"
+  },
+  "homepage": "https://github.com/msdewitt/DRSWebsiteCS495#readme"
+}
