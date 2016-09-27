@@ -21,7 +21,9 @@
 
 #sidebar{
   background-color: #a93232;
-  padding: 20px;
+  padding-left:20px;
+  padding-top:15px;
+  padding-bottom:5px;
   border-radius: 25px;
   border-color: #d06262;
   border-width: thin;
@@ -36,4 +38,5 @@
 footer {
   height: 6rem;
   background: #a93232;
+  margin-top: 25px;
   color: #e6e6e6; }
