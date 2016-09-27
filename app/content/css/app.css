@@ -44,6 +44,11 @@ footer {
   border-radius:10px;
   padding:5px;
   color: #e6e6e6; }
+footer #sponsors img{
+  height:auto;
+  width: 80px;
+  margin: 2px;
+}
 footer body {
   margin: 2rem;
   background: dodgerblue; }
@@ -75,7 +80,7 @@ i {
     border-radius: 2.6rem;
     width: 2.6rem;
     height: 2.6rem;
-    margin: -1.3rem; }
+    margin: -1.2rem; }
   .icon-button i {
     background: none;
     height: 2.6rem;
