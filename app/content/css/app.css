@@ -13,3 +13,27 @@
        color: #fff; }
        .menu-text {
          color: #fff; }
+
+/*Sticky Sidebar*/
+.sticky {
+  position: relative;
+  top: 0; }
+
+#sidebar{
+  background-color: #a93232;
+  padding: 20px;
+  border-radius: 25px;
+  border-color: #d06262;
+  border-width: thin;
+}
+#sidebar p {
+  color: white;
+}
+#sidebar li{
+  color:white;
+}
+
+footer {
+  height: 6rem;
+  background: #a93232;
+  color: #e6e6e6; }
