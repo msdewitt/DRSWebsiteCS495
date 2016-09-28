@@ -5,8 +5,7 @@
   "description": "A website for the Diversity Research Symposium, held annually on college campuses around Indiana.",
   "main": "index.js",
   "engines": {
-    "node": "6.2.0",
-    "bower": "1.7.9"
+    "node": "6.2.0"
   },
   "devDependencies": {
     "babel-preset-es2015": "^6.14.0",
