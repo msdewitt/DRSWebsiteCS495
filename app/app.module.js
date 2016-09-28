@@ -9,13 +9,13 @@
     // 'firebase',
 
     // Custom modules
-    // 'drsApp.home',
+    'drsApp.home',
     'drsApp.layout',
   ])
   .config(configFunction)
   // .run(runFunction);
 
-  // configFunction.$inject = ['$urlRouterProvider'];
+  configFunction.$inject = ['$urlRouterProvider'];
 
   function configFunction($urlRouterProvider) {
     $urlRouterProvider.otherwise('/');
