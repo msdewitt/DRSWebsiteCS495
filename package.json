@@ -8,13 +8,6 @@
     "node": "6.2.0"
   },
   "devDependencies": {
-    "babel-preset-es2015": "^6.14.0",
-    "gulp-babel": "^6.1.2",
-    "gulp-concat": "^2.6.0",
-    "gulp-connect": "^5.0.0",
-    "gulp-order": "^1.1.1",
-    "gulp-plumber": "^1.1.0",
-    "gulp-sourcemaps": "^1.6.0"
   },
   "scripts": {
     "start": "gulp",
@@ -41,6 +34,13 @@
   },
   "homepage": "https://github.com/msdewitt/DRSWebsiteCS495#readme",
   "dependencies": {
-    "bower": "^1.7.9"
+    "bower": "^1.7.9",
+    "babel-preset-es2015": "^6.14.0",
+    "gulp-babel": "^6.1.2",
+    "gulp-concat": "^2.6.0",
+    "gulp-connect": "^5.0.0",
+    "gulp-order": "^1.1.1",
+    "gulp-plumber": "^1.1.0",
+    "gulp-sourcemaps": "^1.6.0"
   }
 }
