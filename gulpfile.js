@@ -82,7 +82,7 @@
   function startWebServer() {
     connect.server({
       root: 'app',
-      port: 8000
+      port: process.env.PORT || 8000
     });
   }
 

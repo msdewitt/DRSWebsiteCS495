@@ -1,0 +1,183 @@
+/*Hover Animation Service Blocks*/
+.service {
+  width: 100%;
+  height: 320px;
+  margin: 80px 0;
+  text-align: center;
+  border: 1px solid #ddd;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease; }
+  .service .service-icon-box {
+    position: relative;
+    top: 100px;
+    display: inline-block;
+    margin-bottom: 40px;
+    padding: 10px;
+    background: white;
+    -webkit-transition: all 0.3s ease;
+    transition: all 0.3s ease; }
+  .service .service-heading {
+    position: relative;
+    top: 80px;
+    -webkit-transition: all 600ms cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    transition: all 600ms cubic-bezier(0.68, -0.55, 0.265, 1.55); }
+  .service .service-description {
+    width: 80%;
+    margin: 0 auto;
+    opacity: 0;
+    -webkit-transition: all 600ms cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    transition: all 600ms cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    -webkit-transform: scale(0);
+    -ms-transform: scale(0);
+    transform: scale(0); }
+  .service .service-icon-box > img.service-icon {
+    width: 40px; }
+  .service:hover {
+    border-color: #a93232; }
+  .service:hover .service-icon-box {
+    top: -30px; }
+  .service:hover .service-heading {
+    top: -30px; }
+  .service:hover .service-description {
+    opacity: 1;
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1); }
+
+/*Navbar*/
+.title-bar {
+ background: #333;
+ padding: 0.9rem; }
+.top-bar {
+ background: #a93232;}
+ .top-bar ul {
+   background: #a93232; }
+   .top-bar ul li {
+     background: #a93232; }
+     .top-bar ul li a {
+       color: #fff; }
+       .menu-text {
+         color: #fff; }
+
+/*Sticky Sidebar*/
+.sticky {
+  position: relative;
+  top: 0; }
+
+#sidebar{
+  background-color: #a93232;
+  padding-left:20px;
+  padding-top:15px;
+  padding-bottom:5px;
+  border-radius: 25px;
+  border-color: #d06262;
+  border-width: thin;
+}
+#sidebar p {
+  color: white;
+}
+#sidebar li{
+  color:white;
+}
+
+footer {
+  height: 6rem;
+  background: #a93232;
+  margin-top: 25px;
+  margin-left: 100px;
+  margin-right:100px;
+  border-radius:10px;
+  padding:5px;
+  color: #e6e6e6; }
+footer #sponsors img{
+  height:auto;
+  width: 80px;
+  margin: 2px;
+}
+footer body {
+  margin: 2rem;
+  background: dodgerblue; }
+
+i {
+  font-size: 2.5rem; }
+
+.icon-button {
+  border-radius: 2.6rem;
+  width: 2.6rem;
+  height: 2.6rem;
+  margin: 0 5px;
+  position: relative;
+  display: inline-block;
+  text-align: center;
+  font-size: 2rem;
+  background: white; }
+  .icon-button span {
+    display: block;
+    border-radius: 0;
+    width: 0;
+    height: 0;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transition: all 0.3s; }
+  .icon-button:hover span {
+    display: block;
+    border-radius: 2.6rem;
+    width: 2.6rem;
+    height: 2.6rem;
+    margin: -1.2rem; }
+  .icon-button i {
+    background: none;
+    height: 2.6rem;
+    width: 2.6rem;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 10;
+    line-height: 2.6rem;
+    transition: all 0.3s; }
+
+.twitter span {
+  background-color: #4099ff; }
+
+.facebook span {
+  background-color: #3B5998; }
+
+.gplus span {
+  background-color: #db5a3c; }
+
+.icon-button .fi-social-twitter {
+  color: #4099ff; }
+
+.icon-button .fi-social-facebook {
+  color: #3b5998; }
+
+.icon-button .fi-social-google-plus {
+  color: #db5a3c; }
+
+.icon-button:hover .fi-social-twitter, .icon-button:hover .fi-social-facebook, .icon-button:hover .fi-social-google-plus {
+  color: white;
+  font-size: 2.6rem;
+  line-height: 3.9rem; }
+
+
+/*Blockquote css*/
+
+blockquote {
+  background: #f9f9f9;
+  border-left: 10px solid #ccc;
+  margin: 1.5em 10px;
+  padding: 0.5em 10px;
+  quotes: "\201C""\201D""\2018""\2019";
+}
+blockquote:before {
+  color: #ccc;
+  content: open-quote;
+  font-size: 4em;
+  line-height: 0.1em;
+  margin-right: 0.25em;
+  vertical-align: -0.4em;
+}
+blockquote p {
+  display: inline;
+}
