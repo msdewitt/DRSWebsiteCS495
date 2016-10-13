@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8"/>
+    <title> Presentations from 2014 </title>
+<!--    <link rel= "stylesheet" href="styles.css" />  -->
+  </head>
+  <body>
+    <div class="mainContainer" data-ng-app="PastPresApp">
+      <h1 align="center">Pesentations From Past Symposiums</h1>
+
+        <div data-ng-controller="PastPresCtrl">
+          <p data-ng-repeat="pres in pastPresentations">
+            {{pres.title}} {{pres.author}} {{pres.synopsis}}
+          </p>
+
+        </div>
+
+    </div>
+
+  </body>
+</html>
