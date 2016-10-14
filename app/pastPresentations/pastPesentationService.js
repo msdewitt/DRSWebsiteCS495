@@ -1,24 +1,8 @@
-var app = angular.module("PastPresApp", []);
-
-app.service("pastPresService" function ($http, $q)
+var app = angular.module('PastPresApp', []);
+app.controller('PastPresCtrl', function ($scope, $http)
 {
-  var deffered = q.defer();
-  $http.get('2014PresentationFile.json').then(function (data)
+  $http.get("2014PresentationFile.json").then(function(response)
   {
-    deffered.resolve(data);
+    $scope.pastPresentations = response.data.presentations;
   });
-
-  this.getpastPresentations = function ()
-  {
-    return deffered.promise;
-  }
-})
-
-.controller("PastPresCtrl", function ($scope, pastPresService)
-{
-  var promise = pastPresService.getpastPresentations();
-  promise.then(function(data)
-  {
-    $scope.pres = data.data;
-  });
-})
+});
