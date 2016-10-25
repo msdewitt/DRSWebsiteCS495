@@ -1,5 +1,5 @@
 .presBlock {
-  background: f9ecec;
+  background: #f9ecec;
 }
 .title {
   font-weight: bold;
@@ -7,4 +7,9 @@
 .author {
   font-weight: bold;
   font-style: italic;
+}
+.synopsis {
+  text-align: justify;
+  padding-left: 40px;
+  padding-right: 40px;
 }

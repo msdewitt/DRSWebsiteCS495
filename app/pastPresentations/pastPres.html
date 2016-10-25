@@ -1,18 +1,18 @@
-<!--  <link rel="stylesheet" type="text/css" href="presStyle.css"> -->
+  <link rel="stylesheet" type="text/css" href="pastPresentations/presStyle.css">
     <div class="mainContainer" data-ng-app="PastPresApp">
       <div class="row">
         <div class="medium-1 columns"></div>
 
         <div class="medium-10 columns text-center">
           <h1 align="center">Pesentations From Past Symposiums</h1>
-
+          <br>
           <div data-ng-controller="PastPresCtrl">
             <div data-ng-repeat="pres in pastPresentations" class="presBlock">
-              <span class="title" style="font-weight: bold;">{{pres.title}}</span>
               <br>
-              <span class="author" style="font-weight: bold; font-style: italic;">{{pres.author}}</span>
-              <p class="synopsis" style="background-color: light-grey;">{{pres.synopsis}}</p>
+               <span class="title">{{pres.title}}</span>
               <br>
+              <span class="author">{{pres.author}}</span>
+              <p class="synopsis">{{pres.synopsis}}</p>
               <hr>
             </div>
 
