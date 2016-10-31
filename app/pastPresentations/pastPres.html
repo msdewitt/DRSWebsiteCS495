@@ -32,13 +32,26 @@
           <hr>
           <div data-ng-controller="PastPresCtrl">
             <ol>
-            <li data-ng-repeat="pres in pastPresentations" class="presBlock">
-              <br>
+            <li data-ng-repeat="pres in pastPresentations" class="">
+              <br />
+              <br />
+
+              <div class="row">
+                <div class="small-12 small-centered columns">
+
+                  <div class="service">
+                    <h4 class="service-heading text-left">{{pres.title}} By: {{pres.author}}</h4>
+                    <p class="service-description">{{pres.synopsis}}</p>
+                  </div>
+
+                </div>
+              </div>
+              <!-- <br>
                <span class="title">{{pres.title}}</span>
               <br>
               <span class="author">{{pres.author}}</span>
               <p class="synopsis">{{pres.synopsis}}</p>
-              <hr>
+              <hr> -->
             </li>
           </ol>
           </div>
