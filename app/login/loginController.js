@@ -1,5 +1,5 @@
-
-angular.module('login', [])
-  .controller('loginController', ('$scope', function($scope){
-    
-  })
+//
+// angular.module('login', [])
+//   .controller('loginController', ('$scope', function($scope){
+//
+//   })

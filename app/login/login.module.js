@@ -1,6 +1,4 @@
 (function(){
-  'use strict'
-
-  var app =
-  angular.module('drsApp.login', []);
+  'use strict';
+  angular.module('drsApp.login',[])
 })()
