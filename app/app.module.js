@@ -11,7 +11,8 @@
     // Custom modules
     'drsApp.home',
     'drsApp.layout',
-    'drsApp.pastPres'
+    'drsApp.pastPres',
+    'drsApp.login'
   ])
   .config(configFunction)
   // .run(runFunction);

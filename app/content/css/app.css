@@ -186,3 +186,9 @@ blockquote p {
   padding-left: 30px;
   padding-right: 30px;
 }
+
+/*Login form*/
+.log-in-form {
+  border: 1px solid #cacaca;
+  padding: 1rem;
+  border-radius: 3px; }
