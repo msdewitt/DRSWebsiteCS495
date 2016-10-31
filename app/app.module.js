@@ -10,6 +10,7 @@
 
     // Custom modules
     'drsApp.home',
+    'drsApp.layout'
     'drsApp.layout',
     'drsApp.pastPres',
     'drsApp.login'
