@@ -1,33 +1,30 @@
+<div class="medium-8 medium-centered large-8 large-centered columns">
 
-<div class="row">
-  <div class="medium-6 medium-centered large-4 large-centered columns">
 
-    <form>
-      <div class="row column log-in-form">
-        <h4 class="text-center">Log in with you email account</h4>
+    <form name="loginForm" ng-submit="vm.login(vm.user)">
+
+      <div class="log-in-form">
+        <h4 >Sign In</h4>
         <label>Email
-          <input type="text" placeholder="somebody@example.com">
+          <input name="email"ng-model="vm.user.email" type="email" placeholder="somebody@example.com" ng-minlength = "6" ng-maxlength="25" required autofocus>
         </label>
+        <!-- <ml-error error-form ="loginForm" text-input = "email"></ml-error> -->
+        <div ng-messages= "loginForm.email.$error">
+          <div ng-message="required" class="callout small alert">You did not enter a field</div>
+          <div ng-message="minlength" class="callout small alert">Your field is too short</div>
+          <div ng-message="maxlength" class="callout small alert">Your field is too long</div>
+        </div>
         <label>Password
-          <input type="text" placeholder="Password">
+          <input name="password" ng-model="vm.user.password" type="password" placeholder="Password" ng-minlength = "6" ng-maxlength="25" required>
         </label>
-        <input id="show-password" type="checkbox"><label for="show-password">Show password</label>
-        <p><a type="submit" class="button expanded">Log In</a></p>
-        <p class="text-center"><a href="#">Forgot your password?</a></p>
+        <div ng-messages= "loginForm.password.$error">
+          <div ng-message="required" class="callout small alert">You did not enter a field</div>
+          <div ng-message="minlength" class="callout small alert">Your field is too short</div>
+          <div ng-message="maxlength" class="callout small alert">Your field is too long</div>
+        </div>
+        <p><button type="submit" class="button expanded">Login</button></p>
       </div>
     </form>
   </div>
 
-<!--
-<div ng-controller = "loginController">
-  <form novalidate class="simple-form">
-    <p>Please enter your username and password</p>
-    <br>
-    User Name: <input type="text" ng-model="user.user_name" />
-    Password: <input type="text" ng-model="user.password" />
-    <br>
-    <input type="button" ng-click="reset()" value="Reset" />
-    <input type="submit" ng-click="checkUser(user)" value="Submit" />
-  </form>
-
-</div> -->
+  </div>
