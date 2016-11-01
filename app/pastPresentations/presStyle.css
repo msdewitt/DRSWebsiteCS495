@@ -69,14 +69,10 @@ input[type="text"].dream-search:focus {
   margin-right: auto;
   margin-top: 10%;
   max-width: 400px;
+  padding: 25px;
 }
 
 .center-row ul{
   display: table;
   margin: 0 auto;
-}
-
-.drsMiniLogo{
-  width: auto;
-  height: 35px;
 }
