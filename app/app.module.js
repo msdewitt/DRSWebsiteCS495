@@ -6,13 +6,14 @@
     'ui.router',
 
     // Third-party modules
-    // 'firebase',
+    'firebase',
 
     // Custom modules
+    'drsApp.core',
     'drsApp.home',
     'drsApp.layout',
     'drsApp.pastPres',
-    'drsApp.login'
+    'drsApp.auth'
   ])
   .config(configFunction)
   // .run(runFunction);
@@ -23,13 +24,13 @@
     $urlRouterProvider.otherwise('/');
   }
 
-  // runFunction.$inject = ['$rootScope', '$state'];
-  //
-  // function runFunction($rootScope, $state) {
-  //   $rootScope.$on('$stateChangeError', function(event, toState, toParams, fromState, fromParams, error) {
-  //     if (error === "AUTH_REQUIRED") {
-  //       $state.go('login');
-  //     }
-  //   });
-  // }
+  runFunction.$inject = ['$rootScope', '$state'];
+
+  function runFunction($rootScope, $state) {
+    $rootScope.$on('$stateChangeError', function(event, toState, toParams, fromState, fromParams, error) {
+      if (error === "AUTH_REQUIRED") {
+        $state.go('login');
+      }
+    });
+  }
 })();

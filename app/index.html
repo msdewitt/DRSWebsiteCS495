@@ -33,7 +33,7 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.2.3/foundation.min.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular.min.js"></script>
-<script src="https://www.gstatic.com/firebasejs/3.0.4/firebase.js"></script>
+<script src="https://www.gstatic.com/firebasejs/3.5.3/firebase.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/angularFire/2.0.1/angularfire.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.3.1/angular-ui-router.min.js"></script>
 
@@ -46,9 +46,16 @@
 <!-- Main App module -->
 <script src="app.module.js"></script>
 
+<!-- firebase -->
+<script src="firebaseConfig.js"></script>
+
 <!-- Layout module scripts -->
 <script src="layout/navbar.module.js"></script>
 <script src="layout/navbar.directive.js"></script>
+
+<!-- Core module scripts -->
+<script src="core/core.module.js"></script>
+<script src="core/firebaseData.service.js"></script>
 
 <!-- Home module scripts -->
 <script src="home/home.module.js"></script>
@@ -60,13 +67,13 @@
 <script src="pastPresentations/config.route.js"></script>
 <script src="pastPresentations/pastPresentationService.js"></script>
 
-<!-- login module scripts -->
-<script src="login/login.module.js"></script>
-<script src="login/config.route.js"></script>
+<!-- Auth module -->
+<script src="auth/auth.module.js"></script>
+<script src="auth/config.route.js"></script>
+<script src="auth/auth.controller.js"></script>
+<script src="auth/auth.service.js"></script>
 
-<!-- Sign-up module scripts -->
-<script src="signUp/signup.module.js"></script>
-<script src="signUp/config.route.js"></script>
+
 
   </body>
 </html>
