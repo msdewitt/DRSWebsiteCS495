@@ -5,6 +5,28 @@
 
       <div class="sign-up-form">
         <h4 >Thank you for becoming part of DRS online! Please fill in this form.</h4>
+        <label>First Name
+          <input name="fname"ng-model="" type="text" required>
+        </label>
+
+        <label>Last Name
+          <input name="lname"ng-model="" type="text" required>
+        </label>
+
+        <label>City
+          <input name="city"ng-model="" type="text" required>
+        </label>
+
+        <label>State
+          <input name="state"ng-model="" type="text" required>
+        </label>
+
+        <label>Please choose the type(s) of account you are registering for.
+          <input name="Attendee"ng-model="" type="checkbox">
+          <input name="Presenter"ng-model="" type="checkbox">
+        </label>
+
+
         <label>Email
           <input name="email"ng-model="vm.user.email" type="email" placeholder="somebody@example.com" ng-minlength = "6" ng-maxlength="25" required autofocus>
         </label>
