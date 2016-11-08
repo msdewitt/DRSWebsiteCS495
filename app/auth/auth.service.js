@@ -36,7 +36,11 @@
     }
 
     function isLoggedIn() {
-      return auth.$getAuth();
+      if(auth.$currentUser() != null){
+        return true;
+      }else{
+      return false;
+      }
     }
     function sendAuthEmail(emailAddress){
       firebaseDataService.emails.push({
