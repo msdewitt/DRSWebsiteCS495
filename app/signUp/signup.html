@@ -1,0 +1,23 @@
+<div class="medium-8 medium-centered large-8 large-centered columns">
+
+
+    <form name="signUpForm" ng-submit="">
+
+      <div class="sign-up-form">
+        <h4 >Thank you for becoming part of DRS online! Please fill in this form.</h4>
+        <label>Email
+          <input name="email"ng-model="vm.user.email" type="email" placeholder="somebody@example.com" ng-minlength = "6" ng-maxlength="25" required autofocus>
+        </label>
+
+        <label>Password
+          <input name="password" ng-model="vm.user.password1" type="password" placeholder="Password" ng-minlength = "6" ng-maxlength="25" required>
+        </label>
+
+        <label>Re-enter Password
+          <input name="password" ng-model="vm.user.password2" type="password" placeholder="Password" ng-minlength = "6" ng-maxlength="25" required>
+        </label>
+
+        <p><button type="submit" class="button expanded">Login</button></p>
+      </div>
+    </form>
+  </div>
