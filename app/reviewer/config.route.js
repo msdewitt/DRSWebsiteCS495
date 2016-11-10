@@ -2,13 +2,13 @@
   'use strict';
 
   angular
-    .module('drsApp.application')
+    .module('drsApp.reviewerApplication')
     .config(configFunction);
 
   configFunction.$inject = ['$stateProvider'];
 
   function configFunction($stateProvider) {
-    $stateProvider.state('application', {
+    $stateProvider.state('reviewerApplication', {
       url: '/pastPres',
       templateUrl: 'reviewer/application.html'
     });

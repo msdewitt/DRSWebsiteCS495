@@ -13,7 +13,8 @@
     'drsApp.home',
     'drsApp.layout',
     'drsApp.pastPres',
-    'drsApp.auth'
+    'drsApp.auth',
+    'drsApp.reviewerApplication'
   ])
   .config(configFunction)
   // .run(runFunction);
