@@ -9,8 +9,8 @@
 
   function configFunction($stateProvider) {
     $stateProvider.state('reviewerApplication', {
-      url: '/pastPres',
-      templateUrl: 'reviewer/application.html'
+      url: '/reviewerApplication',
+      templateUrl: 'reviewer/reviewerApplication.html'
     });
   }
 })();
