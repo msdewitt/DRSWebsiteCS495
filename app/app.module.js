@@ -14,7 +14,8 @@
     'drsApp.layout',
     'drsApp.pastPres',
     'drsApp.auth',
-    'drsApp.reviewerApplication'
+    'drsApp.reviewerApplication',
+    'expertise-choice'
   ])
   .config(configFunction)
   // .run(runFunction);
