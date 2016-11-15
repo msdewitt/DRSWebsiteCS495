@@ -16,29 +16,43 @@
         <input name="university"ng-model="" type="text" required autofocus>
       </label>
 
+      <div data-ng-app="expertise-choice" data-ng-controller="expertiseController">
+        <label>
+          Select your area of expertise or interest
+          <select ng-model="expertise" ng-options="x for x in expertise"></select>
+        </label>
+      </div>
+
       <label>Street address
-        <input name="saddress"ng-model="" type="" required autofocus>
+        <input name="saddress"ng-model="" type="text" required autofocus>
+      </label>
+
+      <label>
+        Apartment #
+        <input name="aptnum"ng-model="" type="text" required autofocus>
       </label>
 
       <label>City
-        <input name="city"ng-model="" type="" required autofocus>
+        <input name="city"ng-model="" type="text" required autofocus>
       </label>
 
       <label>State
-        <input name=""ng-model="" type="" required autofocus>
+        <input name=""ng-model="" type="text" required autofocus>
       </label>
 
       <label>Zip code
-        <input name="zip"ng-model="" type="" required autofocus>
+        <input name="zip"ng-model="" type="text" required autofocus>
       </label>
 
       <label>Phone number
-        <input name="phone"ng-model="" type="" required autofocus>
+        <input name="phone"ng-model="" type="text" required autofocus>
       </label>
 
       <label>Email
         <input name="email"ng-model="vm.user.email" type="email" placeholder="somebody@example.com" required autofocus>
       </label>
+
+      <p><button type="submit" class="button expanded">Register</button></p>
 
     </div>
   </form>
