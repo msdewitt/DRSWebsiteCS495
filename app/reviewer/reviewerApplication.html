@@ -1,59 +1,73 @@
-<div class="medium-6 medium-centered large-4 large-centered columns">
+<div class="row" ng-controller="reviewAppController">
 
-  <form name="reviewerApplication" ng-submit="">
-    <div class="reviewer-application">
-      <h4 class="text-center">Sign Up to become a proposal reviewer</h4>
+  <div class="medium-6 large-6 columns">
 
-      <label> First name
-        <input name="fname"ng-model="" type="text" required autofocus>
-      </label>
+    <form name="reviewerApplication" ng-submit="">
+      <div class="reviewer-application">
+        <h4 class="text-center">Sign Up to become a proposal reviewer</h4>
 
-      <label>Last name
-        <input name="lname"ng-model="" type="text" required autofocus>
-      </label>
-
-      <label>University
-        <input name="university"ng-model="" type="text" required autofocus>
-      </label>
-
-      <div data-ng-app="expertise-choice" data-ng-controller="expertiseController">
-        <label>
-          Select your area of expertise or interest
-          <select ng-model="expertise" ng-options="x for x in expertise"></select>
+        <label> First name
+          <input name="fname"ng-model="user.firstName" type="text" required autofocus>
         </label>
+
+        <label>Last name
+          <input name="lname"ng-model="user.lastName" type="text" required autofocus>
+        </label>
+
+        <label>University or place of employment
+          <input name="university"ng-model="user.university" type="text" required autofocus>
+        </label>
+
+        <div ng-app="expertise-choice" ng-controller="expertiseController">
+          <label>
+            Select your area of expertise or interest
+            <select ng-model="user.expertise" ng-options="x for x in expertise"></select>
+          </label>
+        </div>
+  </div>
+
+  <div class="medium-6 large-6 columns">
+
+        <label>Street address
+          <input name="s1address"ng-model="user.streetAddress1" type="text" required autofocus>
+        </label>
+
+        <label>Street address 2
+          <input name="s2address"ng-model="user.streetAddress2" type="text"  autofocus>
+        </label>
+
+        <label>Apartment or office #
+          <input name="aptnum"ng-model="user.apartmentNum" type="text" autofocus>
+        </label>
+
+        <label>City
+          <input name="city"ng-model="user.city" type="text" required autofocus>
+        </label>
+
+        <label>State
+          <input name=""ng-model="user.state" type="text" required autofocus>
+        </label>
+
+        <label>Zip code
+          <input name="zip"ng-model="user.zip" type="text" required autofocus>
+        </label>
+
+        <label>Phone number
+          <input name="phone1"ng-model="user.phone1" type="text" required autofocus>
+        </label>
+
+        <label>Second phone number
+          <input name="phone2"ng-model="user.phone2" type="text" required autofocus>
+        </label>
+
+        <label>Email
+          <input name="email"ng-model="user.email" type="email" placeholder="somebody@example.com" required autofocus>
+        </label>
+
+        <p><button type="submit" class="button expanded">Register</button></p>
+        <p><input type="button" ng-click="reset()" value="Reset" /></p>
+
       </div>
-
-      <label>Street address
-        <input name="saddress"ng-model="" type="text" required autofocus>
-      </label>
-
-      <label>
-        Apartment #
-        <input name="aptnum"ng-model="" type="text" required autofocus>
-      </label>
-
-      <label>City
-        <input name="city"ng-model="" type="text" required autofocus>
-      </label>
-
-      <label>State
-        <input name=""ng-model="" type="text" required autofocus>
-      </label>
-
-      <label>Zip code
-        <input name="zip"ng-model="" type="text" required autofocus>
-      </label>
-
-      <label>Phone number
-        <input name="phone"ng-model="" type="text" required autofocus>
-      </label>
-
-      <label>Email
-        <input name="email"ng-model="vm.user.email" type="email" placeholder="somebody@example.com" required autofocus>
-      </label>
-
-      <p><button type="submit" class="button expanded">Register</button></p>
-
-    </div>
-  </form>
+    </form>
+  </div>
 </div>
