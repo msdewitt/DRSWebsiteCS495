@@ -1,27 +1,27 @@
-<div class="row" ng-controller="reviewAppController">
+<div class="row" ng-app="revAppController" ng-controller="reviewAppController">
 
   <div class="medium-6 large-6 columns">
 
-    <form name="reviewerApplication" ng-submit="">
+    <form name="reviewerApplication" ng-submit="submitRevApp()">
       <div class="reviewer-application">
         <h4 class="text-center">Sign Up to become a proposal reviewer</h4>
 
         <label> First name
-          <input name="fname"ng-model="user.firstName" type="text" required autofocus>
+          <input ng-model="firstName" type="text" required autofocus>
         </label>
 
         <label>Last name
-          <input name="lname"ng-model="user.lastName" type="text" required autofocus>
+          <input ng-model="lastName" type="text" required autofocus>
         </label>
 
         <label>University or place of employment
-          <input name="university"ng-model="user.university" type="text" required autofocus>
+          <input ng-model="university" type="text" required autofocus>
         </label>
 
         <div ng-app="expertise-choice" ng-controller="expertiseController">
           <label>
             Select your area of expertise or interest
-            <select ng-model="user.expertise" ng-options="x for x in expertise"></select>
+            <select ng-model="expertise" ng-options="x for x in expertise"></select>
           </label>
         </div>
   </div>
@@ -29,39 +29,39 @@
   <div class="medium-6 large-6 columns">
 
         <label>Street address
-          <input name="s1address"ng-model="user.streetAddress1" type="text" required autofocus>
+          <input ng-model="streetAddress1" type="text" required autofocus>
         </label>
 
         <label>Street address 2
-          <input name="s2address"ng-model="user.streetAddress2" type="text"  autofocus>
+          <input ng-model="streetAddress2" type="text"  autofocus>
         </label>
 
         <label>Apartment or office #
-          <input name="aptnum"ng-model="user.apartmentNum" type="text" autofocus>
+          <input ng-model="apartmentNum" type="text" autofocus>
         </label>
 
         <label>City
-          <input name="city"ng-model="user.city" type="text" required autofocus>
+          <input ng-model="city" type="text" required autofocus>
         </label>
 
         <label>State
-          <input name=""ng-model="user.state" type="text" required autofocus>
+          <input ng-model="state" type="text" required autofocus>
         </label>
 
         <label>Zip code
-          <input name="zip"ng-model="user.zip" type="text" required autofocus>
+          <input ng-model="zip" type="text" required autofocus>
         </label>
 
         <label>Phone number
-          <input name="phone1"ng-model="user.phone1" type="text" required autofocus>
+          <input ng-model="phone1" type="text" required autofocus>
         </label>
 
         <label>Second phone number
-          <input name="phone2"ng-model="user.phone2" type="text" required autofocus>
+          <input ng-model="phone2" type="text" required autofocus>
         </label>
 
         <label>Email
-          <input name="email"ng-model="user.email" type="email" placeholder="somebody@example.com" required autofocus>
+          <input ng-model="email" type="email" placeholder="somebody@example.com" required autofocus>
         </label>
 
         <p><button type="submit" class="button expanded">Register</button></p>
