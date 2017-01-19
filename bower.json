@@ -6,7 +6,7 @@
   "license": "MIT",
   "private": false,
   "dependencies": {
-    "angular": "~1.5.6",
+    "angular": "^1.6.1",
     "angular-loader": "~1.5.6",
     "angular-ui-router": "~0.3.1",
     "bootstrap": "^3.3.6",
@@ -16,6 +16,6 @@
     "angular-messages": "1.5.8"
   },
   "resolutions": {
-    "angular": "1.5.6"
+    "angular": "^1.6.1"
   }
 }
