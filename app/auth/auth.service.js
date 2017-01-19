@@ -17,6 +17,7 @@
       logout: logout,
       isLoggedIn: isLoggedIn,
       sendAuthEmail: sendAuthEmail,
+
     };
 
     return service;

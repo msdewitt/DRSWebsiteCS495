@@ -1,5 +1,5 @@
 angular.module('revAppController', [])
-  .controller('reviewAppController', ['$scope', '$firebaseArray' function($scope, $firebaseArray) {
+  .controller('reviewAppController', ['$scope', '$firebaseArray', function($scope, $firebaseArray) {
 
   $scope.submitRevApp = function() {
     var firebaseRef = firebase.database().ref();
