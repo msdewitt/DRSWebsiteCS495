@@ -12,9 +12,11 @@
 
     vm.register = register;
     vm.login = login;
+    vm.newAccount = new accountService.account();
 
     vm.user = {
       email: '',
+      name:'',
       password: ''
     }
 
@@ -22,6 +24,7 @@
       return authService.register(user)
         .then(function() {
           vm.login(user);
+          vm.newAccount.name = user.name
         })
         .then(function() {
           return authService.sendAuthEmail(user.email);

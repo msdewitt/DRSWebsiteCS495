@@ -25,6 +25,9 @@
     //////////////
 
     function register(user) {
+      firebaseDataService.names.push({
+        Name: user.name
+      });
       return auth.$createUserWithEmailAndPassword(user.email, user.password);
     }
 

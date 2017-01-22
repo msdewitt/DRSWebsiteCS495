@@ -5,6 +5,15 @@
       <label>Email
         <input name="email"ng-model="vm.user.email" type="email" placeholder="somebody@example.com" required autofocus>
       </label>
+
+      <!-- Email errors -->
+      <div class="callout small alert" ng-show="authForm.$submitted && authForm.email.$error.required">
+        Email can't be blank
+      </div>
+      <div class="callout small alert" ng-show="authForm.$submitted && authForm.email.$error.email">
+        Email is formatted incorrectly
+      </div>
+
       <!-- <div ng-messages= "registerForm.email.$error">
         <div ng-message="required" class="callout small alert">You did not enter a field</div>
         <div ng-message="minlength" class="callout small alert">Your field is too short</div>
@@ -13,6 +22,12 @@
       <label>Password
         <input name="password"ng-model="vm.user.password" type="password" placeholder="Password" required>
       </label>
+
+      <!-- Password errors -->
+      <div class="callout small alert" ng-show="authForm.$submitted && authForm.password.$error.required">
+        Password can't be blank
+      </div>
+
       <!-- <div ng-messages= "registerForm.password.$error">
         <div ng-message="required" class="callout small alert">You did not enter a field</div>
         <div ng-message="minlength" class="callout small alert">Your field is too short</div>
