@@ -14,7 +14,21 @@
        users: root.child('users'),
        emails: root.child('emails'),
        emails: root.child('users'),
-       accounts: root.child('accounts'),
+       name: root.child('name'),
+       //Required for reviewer and presenter applications below
+       age: root.child('age'),
+       expertise: root.child('expertise'),
+       university: root.child('university'),
+       mainAddress: root.child('mainAddress'),
+       secondaryAddress: root.child('secondaryAddress'),
+       aptNumber: root.child('aptNumber'),
+       city: root.child('city'),
+       state: root.child('state'),
+       zip: root.child('zip'),
+       cellNumber: root.child('cellNumber'),
+       homePhone: root.child('homePhone'),
+
+
       //  accounts: root.child('accounts')
 
 

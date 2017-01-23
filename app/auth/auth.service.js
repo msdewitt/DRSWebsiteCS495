@@ -16,7 +16,7 @@
       login: login,
       logout: logout,
       isLoggedIn: isLoggedIn,
-      sendAuthEmail: sendAuthEmail,
+      buildUserInfo: buildUserInfo,
       sendPasswordResetEmail: sendPasswordResetEmail,
 
     };
@@ -50,9 +50,21 @@
       // return false;
             return auth.$getAuth();
     }
-    function sendAuthEmail(emailAddress){
+    function buildUserInfo(user){
       firebaseDataService.emails.push({
-        emailAddress: emailAddress
+        name: user.name,
+        emailAddress: user.email,
+        age: user.age,
+        expertise: user.expertise,
+        university: user.university,
+        mainAddress: user.mainAddress,
+        secondaryAddress: user.secondaryAddress,
+        aptNumber: user.aptNumber,
+        city: user.city,
+        state: user.state,
+        zip: user.zip,
+        cellNumber: user.cellNumber,
+        homePhone: user.homePhone,
       });
     }
     function sendPasswordResetEmail(user){

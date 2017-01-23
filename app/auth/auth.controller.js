@@ -17,10 +17,21 @@
     vm.user = {
       email: '',
       name:'',
-      password: ''
+      password: '',
+      age: '',
+      expertise: '',
+      university: '',
+      mainAddress: '',
+      secondaryAddress: '',
+      aptNumber: '',
+      city: '',
+      state: '',
+      zip: '',
+      cellNumber: '',
+      homePhone: ''
     }
     function reset(user){
-      console.log("")
+      $state.go('home');
       return authService.sendPasswordResetEmail(user)
 
     }
@@ -30,7 +41,7 @@
           vm.login(user);
         })
         .then(function() {
-          return authService.sendAuthEmail(user.email);
+          return authService.buildUserInfo(user);
         })
         .catch(function(error) {
           console.log(error);
