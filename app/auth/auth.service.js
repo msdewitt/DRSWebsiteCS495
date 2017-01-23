@@ -17,6 +17,7 @@
       logout: logout,
       isLoggedIn: isLoggedIn,
       sendAuthEmail: sendAuthEmail,
+      sendPasswordResetEmail: sendPasswordResetEmail,
 
     };
 
@@ -25,9 +26,6 @@
     //////////////
 
     function register(user) {
-      firebaseDataService.names.push({
-        Name: user.name
-      });
       return auth.$createUserWithEmailAndPassword(user.email, user.password);
     }
 
@@ -56,6 +54,10 @@
       firebaseDataService.emails.push({
         emailAddress: emailAddress
       });
+    }
+    function sendPasswordResetEmail(user){
+      auth.$sendPasswordResetEmail(user.email)
+
     }
   }
 })();

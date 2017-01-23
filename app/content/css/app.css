@@ -242,3 +242,7 @@ body:before {
 #loginFormDiv{
   padding-top: 150px;
 }
+.resetText {
+  font-size: 9px;
+  color: grey;
+}
