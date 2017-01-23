@@ -15,17 +15,17 @@
     };
   }
 
-  // NavbarController.$inject = ['$state', 'authService'];
-  // function NavbarController($state, authService) {
-  function NavbarController() {
-    // var vm = this;
+  NavbarController.$inject = ['$state', 'authService'];
+  function NavbarController($state, authService) {
+  // function NavbarController() {
+    var vm = this;
 
-    // vm.logout = logout;
-    // vm.isLoggedIn = authService.isLoggedIn;
+    vm.logout = logout;
+    vm.isLoggedIn = authService.isLoggedIn;
 
-    // function logout() {
-    //   authService.logout();
-    //   $state.go('home');
-    // }
+    function logout() {
+      authService.logout();
+      $state.go('home');
+    }
   }
 })();

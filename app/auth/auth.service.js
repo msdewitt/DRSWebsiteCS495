@@ -38,13 +38,19 @@
     function logout() {
       auth.$signOut();
     }
+//     function TestCtrl($scope, $timeout) {
+//     $scope.loading = true;
+//     $timeout(function () {
+//         $scope.loading = false;
+//     }, 1000);
+// }
 
     function isLoggedIn() {
-      if(auth.$currentUser() != null){
-        return true;
-      }else{
-      return false;
-      }
+      //  if(auth.$getCurrentUser() != null){
+      //    return true
+      //  }
+      // return false;
+            return auth.$getAuth();
     }
     function sendAuthEmail(emailAddress){
       firebaseDataService.emails.push({

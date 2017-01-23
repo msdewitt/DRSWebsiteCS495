@@ -12,7 +12,6 @@
 
     vm.register = register;
     vm.login = login;
-    vm.newAccount = new accountService.account();
 
     vm.user = {
       email: '',
@@ -24,7 +23,6 @@
       return authService.register(user)
         .then(function() {
           vm.login(user);
-          vm.newAccount.name = user.name
         })
         .then(function() {
           return authService.sendAuthEmail(user.email);
@@ -36,9 +34,9 @@
 
     function login(user) {
       return authService.login(user)
-        .then(function(user) {
-          $state.go('home');
-        })
+      .then(function(user) {
+        $state.go('home');
+      })
         .catch(function(error) {
           console.log(error);
         });
