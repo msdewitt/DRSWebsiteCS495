@@ -7,10 +7,16 @@
   </div>
   <div class="top-bar-right">
     <ul class="menu" data-responsive-menu="drilldown medium-dropdown">
-      <li><a ui-sref="login" ng-show="!vm.isLoggedIn()">Log in</a></li>
-      <li><a><i class="fa fa-user-circle"></i></a></li>
-      <!-- //user-o// -->
-      <li><a href="#" ng-click="vm.logout()" ng-show="vm.isLoggedIn()">Log out</a></li>
+      <li><a ui-sref="login" ng-show="!vm.isLoggedIn()">Sign in <i class="fa fa-sign-in fa-lg"></i></a></li>
+      <li><ul style="list-style-type: none;" class="dropdown" ng-show="vm.isLoggedIn()"><a><i class="fa fa-cog"></i></a>
+        <div class="dropdown-content">
+          <li><a><i class="fa fa-user-circle"></i>  Profile</a></li>
+          <li><a><i class="fa fa-wrench"></i>  Options</a></li>
+        </div>
+      </ul>
+      <!-- //fa fa-user-o// -->
+      </li>
+      <li><a href="#" ng-click="vm.logout()" ng-show="vm.isLoggedIn()">Sign out <i class="fa fa-sign-out fa-lg"></i></a></li>
     </ul>
   </div>
 </div>
