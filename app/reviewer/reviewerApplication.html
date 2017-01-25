@@ -1,32 +1,27 @@
-<div class="row" ng-app="revAppController" ng-controller="reviewAppController">
+<div class="medium-6 medium-centered large-4 large-centered columns" ng-app="revAppController" ng-controller="reviewAppController">
 
-  <div class="medium-6 large-6 columns">
+  <form name="reviewerApplication" ng-submit="submitRevApp()">
+    <div class="reviewer-application">
+      <h4 class="text-center">Sign Up to become a proposal reviewer</h4>
 
-    <form name="reviewerApplication" ng-submit="submitRevApp()">
-      <div class="reviewer-application">
-        <h4 class="text-center">Sign Up to become a proposal reviewer</h4>
+      <label> First name
+        <input ng-model="firstName" type="text" required autofocus>
+      </label>
 
-        <label> First name
-          <input ng-model="firstName" type="text" required autofocus>
+      <label>Last name
+        <input ng-model="lastName" type="text" required autofocus>
+      </label>
+
+      <label>University or place of employment
+        <input ng-model="university" type="text" required autofocus>
+      </label>
+
+      <div ng-app="expertise-choice" ng-controller="expertiseController">
+        <label>
+          Select your area of expertise or interest
+          <select ng-model="expertise" ng-options="x for x in expertise"></select>
         </label>
-
-        <label>Last name
-          <input ng-model="lastName" type="text" required autofocus>
-        </label>
-
-        <label>University or place of employment
-          <input ng-model="university" type="text" required autofocus>
-        </label>
-
-        <div ng-app="expertise-choice" ng-controller="expertiseController">
-          <label>
-            Select your area of expertise or interest
-            <select ng-model="expertise" ng-options="x for x in expertise"></select>
-          </label>
-        </div>
-  </div>
-
-  <div class="medium-6 large-6 columns">
+      </div>
 
         <label>Street address
           <input ng-model="streetAddress1" type="text" required autofocus>
@@ -69,5 +64,4 @@
 
       </div>
     </form>
-  </div>
 </div>
