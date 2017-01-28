@@ -16,12 +16,12 @@
         <input ng-model="university" type="text" required autofocus>
       </label>
 
-      <div ng-app="expertise-choice" ng-controller="expertiseController">
-        <label>
-          Select your area of expertise or interest
-          <select ng-model="expertise" ng-options="x for x in expertise"></select>
-        </label>
-      </div>
+      <label>
+        Select your area of expertise or interest
+        <div ng-controller="expertiseController">
+        <select ng-model="selectedExpertise" ng-options="x for x in expertise"></select>
+        </div>
+      </label>
 
         <label>Street address
           <input ng-model="streetAddress1" type="text" required autofocus>

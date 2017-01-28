@@ -1,5 +1,5 @@
-angular.module('revAppController', [])
-  .controller('reviewAppController', ['$scope', '$firebaseArray', function($scope, $firebaseArray) {
+angular.module('revAppController', []);
+  app.controller('reviewAppController', ['$scope', '$firebaseArray', function($scope, $firebaseArray) {
 
   $scope.submitRevApp = function() {
     var firebaseRef = firebase.database().ref();
@@ -7,7 +7,7 @@ angular.module('revAppController', [])
     firebaseRef.child("firstName").set($scope.firstName);
     firebaseRef.child("lastName").set($scope.lastName);
     firebaseRef.child("university").set($scope.university);
-    firebaseRef.child("expertise").set($scope.expertise);
+    firebaseRef.child("selectedExpertise").set($scope.selectedExpertise);
     firebaseRef.child("streetAddress1").set($scope.streetAddress1);
     firebaseRef.child("streetAddress2").set($scope.streetAddress2);
     firebaseRef.child("apartmentNum").set($scope.apartmentNum);
@@ -36,3 +36,7 @@ angular.module('revAppController', [])
 
   }
    }]);
+
+   app.controller('expertiseController', function($scope) {
+     $scope.expertise = ["African-American Studies", "Asian Studies", "Gender Studies", "Hispanic Studies", "More to come"];
+   });
