@@ -1,6 +1,6 @@
-(function(){
-  'use strict'
-
-  var app =
-  angular.module('drsApp.reviewerApplication', []);
-})()
+// (function(){
+//   'use strict'
+//
+//   var app =
+//   angular.module('drsApp.reviewerApplication', []);
+// })()
