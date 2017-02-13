@@ -7,6 +7,8 @@ angular.module('revAppController', []);
     firebaseRef.child("firstName").set($scope.firstName);
     firebaseRef.child("lastName").set($scope.lastName);
     firebaseRef.child("university").set($scope.university);
+    firebaseRef.child("education").set($scope.education);
+    firebaseRef.child("discipline").set($scope.discipline);
     firebaseRef.child("selectedExpertise").set($scope.selectedExpertise);
     firebaseRef.child("streetAddress1").set($scope.streetAddress1);
     firebaseRef.child("streetAddress2").set($scope.streetAddress2);
@@ -23,6 +25,8 @@ angular.module('revAppController', []);
     $scope.firstName = '';
     $scope.lastName = '';
     $scope.university = '';
+    $scope.education = '';
+    $scope.discipline = '';
     $scope.expertise = '';
     $scope.streetAddress1 = '';
     $scope.streetAddress2 = '';
@@ -35,7 +39,4 @@ angular.module('revAppController', []);
     $scope.email = '';
   }
 
-  .controller('expertiseController', function($scope) {
-    $scope.expertise = ["African-American Studies", "Asian Studies", "Gender Studies", "Hispanic Studies", "More to come"];
-  });
 }]);
