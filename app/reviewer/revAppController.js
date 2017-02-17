@@ -3,7 +3,7 @@ angular.module('revAppController', []);
 
   $scope.submitRevApp = function() {
     var firebaseRef = firebase.database().ref();
-
+alert("here");
     firebaseRef.child("firstName").set($scope.firstName);
     firebaseRef.child("lastName").set($scope.lastName);
     firebaseRef.child("university").set($scope.university);
@@ -19,6 +19,7 @@ angular.module('revAppController', []);
     firebaseRef.child("phone1").set($scope.phone1);
     firebaseRef.child("phone2").set($scope.phone2);
     firebaseRef.child("email").set($scope.email);
+    reset();
   }
 
   $scope.reset = function() {
