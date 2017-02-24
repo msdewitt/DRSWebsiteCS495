@@ -1,9 +1,14 @@
-angular.module('revAppController', []);
-  app.controller('reviewAppController', ['$scope', '$firebaseArray', function($scope, $firebaseArray) {
+angular.module('drsApp.reviewerApplication');
+  app.controller(reviewAppController, ['$scope', '$firebaseArray']);
+
+
+  reviewAppController.$inject = ['$scope','$firebaseArray'];
+  function reviewAppController($scope, $firebaseArray){
+
 
   $scope.submitRevApp = function() {
     var firebaseRef = firebase.database().ref();
-alert("here");
+    console.log("Submited reviewer application")
     firebaseRef.child("firstName").set($scope.firstName);
     firebaseRef.child("lastName").set($scope.lastName);
     firebaseRef.child("university").set($scope.university);
@@ -39,5 +44,4 @@ alert("here");
     $scope.phone2 = '';
     $scope.email = '';
   }
-
-}]);
+};

@@ -1,4 +1,4 @@
-angular.module('wordCountCtr', [])
+angular.module('drs.wordCountCtr', [])
 .controller('wordController', function(){
   var wordController = this;
   wordController.CharacterLength = 0;
@@ -48,7 +48,7 @@ angular.module('wordCountCtr', [])
   wordController.IsAlphabet = function(character){
     var numeric_char = character.charCodeAt(character);
 
-    if(numeric_char>64 && numeric_char<91){/ A-Z
+    if(numeric_char>64 && numeric_char<91){// A-Z
       return true;
     }
     if(numeric_char>96 && numeric_char<123){// a-z

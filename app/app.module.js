@@ -15,7 +15,9 @@
     'drsApp.pastPres',
     'drsApp.auth',
     'drsApp.reviewerApplication',
-    'drsApp.presentationSubmit'
+    // 'drsApp.presentationSubmit',
+    // 'drs.wordCountCtr'
+
   ])
   .config(configFunction)
   // .run(runFunction);
