@@ -1,3 +1,4 @@
+/*
 angular.module('drs.wordCountCtr', [])
 .controller('wordController', function(){
   var wordController = this;
@@ -58,3 +59,4 @@ angular.module('drs.wordCountCtr', [])
   }
 
 });
+*/

@@ -14,7 +14,7 @@
     'drsApp.layout',
     'drsApp.pastPres',
     'drsApp.auth',
-    'drsApp.reviewerApplication',
+    'drsApp.reviewerApplication'
     // 'drsApp.presentationSubmit',
     // 'drs.wordCountCtr'
 

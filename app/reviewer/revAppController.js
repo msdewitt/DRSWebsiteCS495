@@ -1,11 +1,12 @@
-angular.module('drsApp.reviewerApplication');
-  app.controller(reviewAppController, ['$scope', '$firebaseArray']);
 
+angular.module('drsApp.reviewerApplication');
+  app.controller('reviewAppController', ['$scope', '$firebaseArray']);
 
   reviewAppController.$inject = ['$scope','$firebaseArray'];
+
   function reviewAppController($scope, $firebaseArray){
-
-
+    console.log("in function");
+/*
   $scope.submitRevApp = function() {
     var firebaseRef = firebase.database().ref();
     console.log("Submited reviewer application")
@@ -44,4 +45,5 @@ angular.module('drsApp.reviewerApplication');
     $scope.phone2 = '';
     $scope.email = '';
   }
+*/
 };
