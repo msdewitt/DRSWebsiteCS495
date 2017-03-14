@@ -10,8 +10,8 @@
       <li><a ui-sref="login" ng-show="!vm.isLoggedIn()">Sign in <i class="fa fa-sign-in fa-lg"></i></a></li>
       <li><ul style="list-style-type: none;" class="dropdown" ng-show="vm.isLoggedIn()"><a><i class="fa fa-cog"></i></a>
         <div class="dropdown-content">
-          <li><a><i class="fa fa-user-circle"></i>  Profile</a></li>
-          <li><a><i class="fa fa-wrench"></i>  Options</a></li>
+          <li><a ui-sref="schedule"><i class="fa fa-user-circle"></i>  Profile</a></li>
+          <li><a ui-sref="login"><i class="fa fa-wrench"></i>  Options</a></li>
         </div>
       </ul>
       <!-- //fa fa-user-o// -->
