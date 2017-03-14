@@ -1,17 +1,19 @@
-<div class="medium-6 medium-centered large-4 large-centered columns" ng-controller="reviewAppController">
+<div id="reviewerDiv"class="medium-7 medium-centered large-9 large-centered columns" ng-controller="reviewAppController">
 
-  <form name="reviewerApplication" ng-submit="submitRevApp()">
+  <form name="reviewerApplication" id="reviewerAppDiv"ng-submit="submitRevApp()">
     <div class="reviewer-application">
-      <h4 class="text-center">Sign Up to become a proposal reviewer</h4>
+      <h4 class="text-center"><strong>Sign Up to become a proposal reviewer</strong></h4>
+      <br>
 
-      <label> First name
-        <input ng-model="firstName" type="text" required autofocus>
+      <label for="firstName"> First name
+        <input ng-model="firstName" type="text" name="firstName"required autofocus>
       </label>
 
       <label>Last name
         <input ng-model="lastName" type="text" required autofocus>
       </label>
-
+      <hr>
+      <h5>Background</h5>
       <label>University or place of employment
         <input ng-model="university" type="text" required autofocus>
       </label>
@@ -40,7 +42,8 @@
 -->
         </select>
       </label>
-
+      <hr>
+        <h5>Address</h5>
         <label>Street address
           <input ng-model="streetAddress1" type="text" required autofocus>
         </label>
@@ -64,7 +67,8 @@
         <label>Zip code
           <input ng-model="zip" type="text" required autofocus>
         </label>
-
+        <hr>
+        <h5>Contact</h5>
         <label>Cell
           <input ng-model="phone1" type="text" autofocus>
         </label>
@@ -77,8 +81,11 @@
           <input ng-model="email" type="email" placeholder="somebody@example.com" required autofocus>
         </label>
 
-        <p><button type="submit" class="button expanded">Register</button></p>
-        <p><input type="button" ng-click="reset()" value="Reset" /></p>
+        <div class="large-2 medium-3">
+          <p><button type="submit" class="button expanded">Register</button></p>
+          <p><input type="button" ng-click="reset()" value="Reset" /></p>
+        </div>
+
 
       </div>
     </form>
