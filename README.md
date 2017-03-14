@@ -6,6 +6,7 @@ A website for the Diversity Research Symposium, held annually at different unive
 
 * [AngularJS 1.x](https://angularjs.org/)
 * [UIRouter](https://github.com/angular-ui/ui-router)
+* [Timetable.js](https://github.com/Grible/timetable.js)
 
 In development:
 * [ECMAScript 2016 (ES6)](https://github.com/lukehoban/es6features)
