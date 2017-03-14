@@ -14,9 +14,9 @@
     'drsApp.layout',
     'drsApp.pastPres',
     'drsApp.auth',
-    'drsApp.reviewerApplication'
-    // 'drsApp.presentationSubmit',
-    // 'drs.wordCountCtr'
+    'drsApp.reviewerApplication',
+    'drsApp.presentationSubmit',
+
 
   ])
   .config(configFunction)

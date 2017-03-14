@@ -16,94 +16,27 @@
         <input ng-model="university" type="text" required autofocus>
       </label>
 
-      <label>
+      <label ng-controller="educationController">
         select your level of education
-        <select ng-model="education">
-          <option value="bachelor">Bachelor Degree</option>
-          <option value="master">Master Degree</option>
-          <option value="doctorate ">Doctorate Degree</option>
+        <select ng-model="selectedEducation" ng-options="education for education in degrees" required>
         </select>
       </label>
 
-      <label>
+      <label ng-controller="disciplineController">
         Select your discipline
-        <select ng-model="">
-          <option value="agriculture">Agriculture</option>
-          <option value="anthropology">Anthropology</option>
-          <option value="appliedMathematics">Applied Mathematics</option>
-          <option value="archaeology">Archaeology</option>
-          <option value="architectureDesign">Architecture and design</option>
-          <option value="areaStudies">Area studies </option>
-          <option value="arts">Arts</option>
-          <option value="biology">Biology</option>
-          <option value="business">Business</option>
-          <option value="chemistry">Chemistry</option>
-          <option value="computerSciences">Computer sciences</option>
-          <option value="culturalEthnic">Cultural and ethnic studies </option>
-          <option value="Divinity">Divinity </option>
-          <option value="earthSciences">Earth sciences</option>
-          <option value="economics">Economics</option>
-          <option value="education">Education</option>
-          <option value="engineering">Engineering and technology</option>
-          <option value="environmentalForestry">Environmental studies and forestry</option>
-          <option value="familyConsumer">Family and consumer science</option>
-          <option value="formalSciences">Formal sciences </option>
-          <option value="genderSexuality">Gender and sexuality studies</option>
-          <option value="geography">Geography</option>
-          <option value="humanHistory">Human history</option>
-          <option value="performanceRecreation">Human physical performance and recreation</option>
-          <option value="humanities">Humanities</option>
-          <option value="intelligence">Intelligence</option>
-          <option value="Journalism">Journalism, media studies and communication</option>
-          <option value="law">Law</option>
-          <option value="libraryMuseum">Library and museum studies</option>
-          <option value="linguistics">Linguistics</option>
-          <option value="literature">Literature</option>
-          <option value="logic">Logic</option>
-          <option value="mathematics">Mathematics</option>
-          <option value="medicine">Medicine</option>
-          <option value="militar">Military sciences</option>
-          <option value="natural">Natural sciences</option>
-          <option value="philosophy">Philosophy</option>
-          <option value="physics">Physics</option>
-          <option value="political">Political science</option>
-          <option value="psychology">Psychology</option>
-          <option value="publicAdmin">Public administration</option>
-          <option value="publicPolicy">Public policy</option>
-          <option value="pureMath">Pure Mathematics</option>
-          <option value="religion">Religion</option>
-          <option value="socialSciences">Social sciences</option>
-          <option value="socialWork">Social work</option>
-          <option value="sociology">Sociology</option>
-          <option value="spaceSciences">Space sciences</option>
-          <option value="statistics">Statistics</option>
-          <option value="systemScience">Systems science</option>
-          <option value="transportation">Transportation</option>
-          <option value="Other">Other</option>
+        <select ng-model="selectedDiscipline" ng-options="discipline for discipline in disciplines" required>
         </select>
       </label>
 
-      <label>
+      <label ng-controller="expertiseController">
         Select your area of expertise or interest
-        <select ng-model="selectedExpertise">
-          <option value="underrepresentedGroups">Access and success of underrepresented groups</option>
-          <option value="campusClimate">Campus climate and inter-group relations</option>
-          <option value="communityOutreach">Community Outreach</option>
-          <option value="educationScholarship">Education and scholarship</option>
-          <option value="viabilityVitality">Institutional viability and vitality</option>
-          <option value="interdisciplinaryResearch">Interdisciplinary research on diversity and interdisciplinary topics</option>
-          <option value="mentoring">Mentoring</option>
-          <option value="ppmdd">Privilege, power, marginalization, discrimination, and difference</option>
-          <option value="research">Research</option>
-          <option value="scholarship">Scholarship</option>
-          <option value="teaching">Teaching</option>
-          <option value="other">Which other expertise would you like included. ---OTHER (SPECIFY):</option>
+        <select ng-model="selectedExpertise" ng-options="expertise for expertise in expertises" required>
 <!--
-        <span ng-if="selectedExpertise == 'other'">
+        <div ng-if="selectedExpertise == '---OTHER (SPECIFY):'">
           <label>Please specify other:
-            <input ng-model="selectedExpertise" type="text" autofocus>
+            <input type="text" autofocus>
           </label>
-        </span>
+        </div>
 -->
         </select>
       </label>
