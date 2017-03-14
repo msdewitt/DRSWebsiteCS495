@@ -1,6 +1,6 @@
-<div class="medium-6 medium-centered large-4 large-centered columns" ng-app="presAppController" ng-controller="presAppController">
+<div class="medium-6 medium-centered large-4 large-centered columns" ng-controller="presAppController">
   <form name="presentationSubmission" ng-submit="submitSubmissionApp()">
-    <div class="reviewer-application" ng-app="wordCountCtr">
+    <div class="reviewer-application">
       <h4 class="text-center">Presentation Proposal Submission Page</h4>
 
       <label> First name
@@ -15,21 +15,26 @@
         <input ng-model="university" type="text" required autofocus>
       </label>
 
-      <label ng-controller="wordController as wordController">
+      <label>
         Please enter 4 keywords that describe your presentation
-        <textarea ng-model="wordController.Text" ng-change="wordController.UpdateLengths()" rows="2"></textarea>
+        <textarea rows="2"></textarea>
+      </label>
+
+      <label>
+        Please enter a brief description of your presentation <br /> (2 sentences)
+        <textarea rows="4"></textarea>
+      </label>
+
+      <label>
+        Please enter an abstract of your presentation<br />(250 word maximum)
+        <textarea rows="10"></textarea>
+<!--
+     ng-controller="wordController as wordController"
+        <textarea ng-model="wordController.Text" ng-change="wordController.UpdateLengths()" rows="10"></textarea>
         <p ng-model="wordController.WordsLength">
           You have entered <font ng-style="wordController.FontStyle">{{wordController.WordsLength}}</font>/4 words</p>
-      </label>
-
-      <label>Please enter a brief description of your presentation <br /> (2 sentences, approximately 25 words)
-        <textarea rows="4"></textarea>
-        <p>You have used 0/25 words</p>
-      </label>
-
-      <label>Please enter an abstract of your presentation<br />(250 word maximum)
-        <textarea rows="10"></textarea>
         <p>You have used 0/250 words</p>
+-->
       </label>
 
       <p><button type="submit" class="button expanded">Submit Proposal</button></p>
