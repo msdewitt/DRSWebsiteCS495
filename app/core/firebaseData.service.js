@@ -7,6 +7,8 @@
 
   function firebaseDataService() {
     var root = firebase.database().ref();
+    var user = firebase.auth().currentUser;
+
 
     var service = {
       root: root,
@@ -36,6 +38,9 @@
 
     };
 
+
     return service;
   }
+
+
 })();

@@ -6,33 +6,33 @@
       <br>
 
       <label for="firstName"> First name
-        <input ng-model="firstName" type="text" name="firstName" maxlength="20" required autofocus>
+        <input ng-model="firstName" type="text" name="firstName" maxlength="20"  required autofocus>
       </label>
 
       <label>Last name
-        <input ng-model="lastName" type="text" required maxlength="20" autofocus>
+        <input ng-model="lastName" type="text"  maxlength="20" required autofocus>
       </label>
       <hr>
       <h5>Background</h5>
       <label>University or place of employment
-        <input ng-model="university" type="text" required autofocus>
+        <input ng-model="university" type="text"  required autofocus>
       </label>
 
       <label ng-controller="educationController">
         select your level of education
-        <select ng-model="selectedEducation" ng-options="education for education in degrees" required>
+        <select ng-model="selectedEducation" ng-options="education for education in degrees" >
         </select>
       </label>
 
       <label ng-controller="disciplineController">
         Select your discipline
-        <select ng-model="selectedDiscipline" ng-options="discipline for discipline in disciplines" required>
+        <select ng-model="selectedDiscipline" ng-options="discipline for discipline in disciplines" >
         </select>
       </label>
 
       <label ng-controller="expertiseController">
         Select your area of expertise or interest
-        <select ng-model="selectedExpertise" ng-options="expertise for expertise in expertises" required>
+        <select ng-model="selectedExpertise" ng-options="expertise for expertise in expertises" >
 <!--
         <div ng-if="selectedExpertise == '---OTHER (SPECIFY):'">
           <label>Please specify other:
@@ -45,15 +45,15 @@
       <hr>
         <h5>Address</h5>
         <label>Street address
-          <input ng-model="streetAddress1" type="text" required autofocus>
+          <input ng-model="mainAddress" type="text"  required autofocus>
         </label>
 
         <label>Street address 2
-          <input ng-model="streetAddress2" type="text"  autofocus>
+          <input ng-model="secondaryAddress" type="text"  required autofocus>
         </label>
 
         <label>Apartment or office #
-          <input ng-model="apartmentNum" type="text" autofocus>
+          <input ng-model="apartmentNum" type="text" required autofocus>
         </label>
 
         <label>City
@@ -61,24 +61,24 @@
         </label>
 
         <label>State
-          <input ng-model="state" type="text" required autofocus>
+          <input ng-model="state" type="text" required maxlength="2" autofocus>
         </label>
 
         <label>Zip code
-          <input ng-model="zip" type="text" required autofocus>
+          <input ng-model="zip" type="text"  autofocus>
         </label>
         <hr>
         <h5>Contact</h5>
         <label>Cell
-          <input ng-model="phone1" type="text" autofocus>
+          <input ng-model="cell" type="text" required autofocus>
         </label>
 
         <label>Home phone
-          <input ng-model="phone2" type="text" autofocus>
+          <input ng-model="home" type="text" required autofocus>
         </label>
 
         <label>Email
-          <input ng-model="email" type="email" placeholder="somebody@example.com" required autofocus>
+          <input ng-model="email" type="email" placeholder="somebody@example.com"  required autofocus>
         </label>
 
         <div class="large-2 medium-3">

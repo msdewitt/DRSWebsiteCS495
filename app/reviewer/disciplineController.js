@@ -1,4 +1,4 @@
-angular.module('drsApp.reviewerApplication');
+var app = angular.module('drsApp.reviewerApplication');
   app.controller('disciplineController', disciplineController)
 
   function disciplineController($scope){
@@ -55,5 +55,5 @@ angular.module('drsApp.reviewerApplication');
       "Systems science",
       "Transportation",
       "Other"
-    ]
+    ];
   };

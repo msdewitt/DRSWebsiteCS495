@@ -1,5 +1,6 @@
-angular.module('drsApp.reviewerApplication');
-  app.controller('educationController', educationController)
+
+var app = angular.module('drsApp.reviewerApplication');
+  app.controller('educationController', educationController);
 
   function educationController($scope){
     $scope.degrees=[
