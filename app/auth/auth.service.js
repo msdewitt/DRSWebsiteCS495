@@ -10,6 +10,7 @@
   function authService($firebaseAuth, firebaseDataService) {
     var auth = $firebaseAuth();
 
+
     var service = {
       auth: auth,
       register: register,
@@ -51,7 +52,9 @@
             return auth.$getAuth();
     }
     function buildUserInfo(user){
+      var profile = firebase.auth().currentUser;
       firebaseDataService.emails.push({
+        uid: profile.uid,
         name: user.name,
         emailAddress: user.email,
         age: user.age,
@@ -65,6 +68,9 @@
         zip: user.zip,
         cellNumber: user.cellNumber,
         homePhone: user.homePhone,
+        reviewer: user.reviewer,
+        presenter: user.presenter,
+        admin: user.admin
       });
     }
     function sendPasswordResetEmail(user){

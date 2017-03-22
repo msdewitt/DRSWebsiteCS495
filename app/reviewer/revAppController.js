@@ -12,11 +12,13 @@ var app = angular.module('drsApp.reviewerApplication');
 
   function reviewAppController($scope, $firebaseArray){
     var id = "";
+    var user = firebase.auth().currentUser;
     var users = firebase.database().ref("users");
-    users.on('child_added', function(snapshot) {
+
+    users.orderByChild('uid').equalTo(user.uid).on('child_added', function(snapshot) {
+
     var message = snapshot.val();
     id = snapshot.key;
-
     // id = user.uid;
     // console.log(message + ": "+ id);
     });
@@ -25,21 +27,20 @@ var app = angular.module('drsApp.reviewerApplication');
   $scope.submitRevApp = function(users) {
     console.log("ID Key: "+ id);
 
-    var user = firebase.auth().currentUser;
+
 
 
     var firebaseRef = firebase.database().ref();
-    var userWithKey = firebase.database().ref("users/"+id);
-
-
-console.log(userWithKey);
 
 
 
-console.log("---------------------------------");
+
+//
 // console.log($scope.discipline);
 // console.log($scope.education);
 var specificUser = firebaseRef.child('users').child(id);
+var admin = specificUser.child('admin');
+if(specificUser.child('presenter') == true){
 specificUser.set({
     name: ($scope.firstName + " " + $scope.lastName),
     aptNumber: ""+$scope.apartmentNum,
@@ -54,20 +55,41 @@ specificUser.set({
     mainAddress: $scope.mainAddress,
     secondaryAddress: $scope.secondaryAddress,
     state: $scope.state,
-    zip: ""+$scope.zip
+    zip: ""+$scope.zip,
+    reviewer: true,
+    presenter: true,
+    admin: admin,
+    uid: user.uid
+
 });
+}else{
+  specificUser.set({
+      name: ($scope.firstName + " " + $scope.lastName),
+      aptNumber: ""+$scope.apartmentNum,
+      university: $scope.university,
+      // discipline: ""+$scope.selectedDiscipline,
+      cellNumber: ""+ $scope.cell,
+      city: $scope.city,
+      // education: ""+$scope.selectedEducation,
+      emailAddress: $scope.email,
+      // expertise: $scope.selectedExpertise,
+      homePhone: ""+$scope.home,
+      mainAddress: $scope.mainAddress,
+      secondaryAddress: $scope.secondaryAddress,
+      state: $scope.state,
+      zip: ""+$scope.zip,
+      reviewer: true,
+      presenter: false,
+      admin: admin,
+      uid: user.uid
+
+  });
+};
 
 
 
-
-user.updateProfile({
-  name: "Jane Q. User",
-  cellNumber: "812-631-8962"
-}).then(function() {
-  // Update successful.
-}, function(error) {
-  // An error happened.
-});
+//
+// user.updateEmail($scope.email);
 
 };
 };

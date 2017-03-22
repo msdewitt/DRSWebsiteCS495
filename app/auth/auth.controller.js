@@ -28,7 +28,10 @@
       state: '',
       zip: '',
       cellNumber: '',
-      homePhone: ''
+      homePhone: '',
+      reviewer: false,
+      presenter: false,
+      admin: false
     }
     function reset(user){
       $state.go('home');
