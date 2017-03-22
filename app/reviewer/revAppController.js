@@ -1,6 +1,12 @@
 
-angular.module('drsApp.reviewerApplication');
+var app = angular.module('drsApp.reviewerApplication');
   app.controller('reviewAppController', reviewAppController);
+
+  app.controller('expertiseController', expertiseController);
+
+  app.controller('disciplineController', disciplineController);
+
+  app.controller('educationController', educationController);
 
   reviewAppController.$inject = ['$scope','$firebaseArray'];
 
@@ -26,37 +32,6 @@ angular.module('drsApp.reviewerApplication');
     var userWithKey = firebase.database().ref("users/"+id);
 
 
-//     console.log(firebaseRef.child("firstName"));
-//     firebaseRef.child("firstName").set($scope.firstName); --
-//     console.log("firstName: "+ $scope.firstName); --
-//     firebaseRef.child("lastName").set($scope.lastName); --
-//     console.log("lastName: "+ $scope.lastName); --
-//     firebaseRef.child("university").set($scope.university); --
-//     console.log("university"+ $scope.university); --
-// //    firebaseRef.child("education").set($scope.education); --
-//     console.log("education: "+ $scope.education); --
-// //    firebaseRef.child("discipline").set($scope.discipline); --
-//     console.log("discipline: "+ $scope.discipline); --
-// //    firebaseRef.child("selectedExpertise").set($scope.selectedExpertise); --
-//     console.log("selectedExpertise: "+ $scope.selectedExpertise); --
-//     firebaseRef.child("streetAddress1: ").set($scope.streetAddress1); --
-//     console.log("streetAddress1: "+ $scope.streetAddress1); --
-//     firebaseRef.child("streetAddress2").set($scope.streetAddress2); --
-//     console.log("streetAddress2: "+ $scope.streetAddress2); --
-//     firebaseRef.child("apartmentNum: ").set($scope.apartmentNum); --
-//     console.log("apartmentNum: "+ $scope.apartmentNum); --
-//     firebaseRef.child("city").set($scope.city); --
-//     console.log("city: "+ $scope.city); --
-//     firebaseRef.child("state").set($scope.state); --
-//     console.log("state: "+ $scope.state); --
-//     firebaseRef.child("zip").set($scope.zip); --
-//     console.log("zip: "+ $scope.zip); --
-//     firebaseRef.child("phone1").set($scope.phone1); --
-//     console.log("phone1: "+ $scope.phone1); --
-//     firebaseRef.child("phone2").set($scope.phone2); --
-//     console.log("phone2: "+ $scope.phone2); --
-//     firebaseRef.child("email").set($scope.email); --
-//     console.log("email: "+ $scope.email); --
 console.log(userWithKey);
 
 
@@ -94,45 +69,89 @@ user.updateProfile({
   // An error happened.
 });
 
-// userWithKey.set({
-//   name: ($scope.firstName + " " + $scope.lastName),
-//   aptNumber: $scope.apartmentNum,
-//   university: "",
-//   age: "",
-//   cellNumber: "",
-//   city: "",
-//   emailAddress: "",
-//   expertise: "",
-//   homePhone: "",
-//   mainAddress: "",
-//   secondaryAddress: "",
-//   state: "",
-//   zip: "",
-//
-// }).then(function() {
-//   // Update successful.
-// }, function(error) {
-//   // An error happened.
-// });
-//    reset();
-  }
+};
+};
 
-  $scope.reset = function() {
-    // $scope.firstName = '';
-    // $scope.lastName = '';
-    // $scope.university = '';
-    // $scope.education = '';
-    // $scope.discipline = '';
-    // $scope.expertise = '';
-    // $scope.streetAddress1 = '';
-    // $scope.streetAddress2 = '';
-    // $scope.apartmentNum = '';
-    // $scope.city = '';
-    // $scope.state = '';
-    // $scope.zip = '';
-    // $scope.phone1 = '';
-    // $scope.phone2 = '';
-    // $scope.email = '';
-  }
+function educationController($scope){
+  $scope.degrees=[
+    "Bachelor Degree",
+    "Master Degree",
+    "Doctorate Degree"
+  ]
+};
 
+
+function disciplineController($scope){
+  $scope.disciplines=[
+    "Agriculture",
+    "Anthropology",
+    "Applied Mathematics",
+    "Archaeology",
+    "Architecture and design",
+    "Area studies",
+    "Arts",
+    "Biology",
+    "Business",
+    "Chemistry",
+    "Computer sciences",
+    "Cultural and ethnic studies",
+    "Divinity",
+    "Earth sciences",
+    "Economics",
+    "Education",
+    "Engineering and technology",
+    "Environmental studies and forestry",
+    "Family and consumer science",
+    "Formal sciences",
+    "Gender and sexuality studies",
+    "Geography",
+    "Human history",
+    "Human physical performance and recreation",
+    "Humanities",
+    "Intelligence",
+    "Journalism, media studies and communication",
+    "Law",
+    "Library and museum studies",
+    "Linguistics",
+    "Literature",
+    "Logic",
+    "Mathematics",
+    "Medicine",
+    "Military sciences",
+    "Natural sciences",
+    "Philosophy",
+    "Physics",
+    "Political science",
+    "Psychology",
+    "Public administration",
+    "Public policy",
+    "Pure Mathematics",
+    "Religion",
+    "Social sciences",
+    "Social work",
+    "Sociology",
+    "Space sciences",
+    "Statistics",
+    "Systems science",
+    "Transportation",
+    "Other"
+  ]
+};
+
+
+function expertiseController($scope){
+  $scope.expertises=[
+    "Access and success of underrepresented groups",
+    "Campus climate and inter-group relations",
+    "Community Outreach",
+    "Education and scholarship",
+    "Institutional viability and vitality",
+    "Interdisciplinary research on diversity and interdisciplinary topics",
+    "Mentoring",
+    "Privilege, power, marginalization, discrimination, and difference",
+    "Research",
+    "Scholarship",
+    "Teaching",
+    "---OTHER (SPECIFY):"
+  ]
 };

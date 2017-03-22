@@ -1,6 +1,6 @@
-<div class="medium-6 medium-centered large-4 large-centered columns" ng-controller="presAppController">
-  <form name="presentationSubmission" ng-submit="submitSubmissionApp()">
-    <div class="reviewer-application">
+<div id="reviewerDiv" class="medium-7 medium-centered large-9 large-centered columns" ng-controller="presAppController">
+  <form name="presentationSubmission" id="reviewerAppDiv" ng-submit="submitSubmissionApp()">
+    <div class="presenter-submit">
       <h4 class="text-center">Presentation Proposal Submission Page</h4>
 
       <label> First name
@@ -10,24 +10,89 @@
       <label>Last name
         <input ng-model="lastName" type="text" required autofocus>
       </label>
-
+      <hr>
+      <h5>Background</h5>
       <label>University or place of employment
         <input ng-model="university" type="text" required autofocus>
       </label>
 
+      <label ng-controller="educationController">
+        select your level of education
+        <select ng-model="selectedEducation" ng-options="education for education in degrees" required>
+        </select>
+      </label>
+
+      <label ng-controller="disciplineController">
+        Select your discipline
+        <select ng-model="selectedDiscipline" ng-options="discipline for discipline in disciplines" required>
+        </select>
+      </label>
+
+      <label ng-controller="expertiseController">
+        Select your area of expertise or interest
+        <select ng-model="selectedExpertise" ng-options="expertise for expertise in expertises" required>
+<!--
+        <div ng-if="selectedExpertise == 'OTHER (SPECIFY):'">
+          <label>Please specify other:
+            <input type="text" autofocus>
+          </label>
+        </div>
+-->
+        </select>
+      </label>
+      <hr>
+        <h5>Address</h5>
+        <label>Street address
+          <input ng-model="streetAddress1" type="text" required autofocus>
+        </label>
+
+        <label>Street address 2
+          <input ng-model="streetAddress2" type="text"  autofocus>
+        </label>
+
+        <label>Apartment or office #
+          <input ng-model="apartmentNum" type="text" autofocus>
+        </label>
+
+        <label>City
+          <input ng-model="city" type="text" required autofocus>
+        </label>
+
+        <label>State
+          <input ng-model="state" type="text" required autofocus>
+        </label>
+
+        <label>Zip code
+          <input ng-model="zip" type="text" required autofocus>
+        </label>
+        <hr>
+        <h5>Contact</h5>
+        <label>Phone
+          <input ng-model="phone1" type="text" autofocus required>
+        </label>
+
+        <label>Alternative phone
+          <input ng-model="phone2" type="text" autofocus>
+        </label>
+
+        <label>Email
+          <input ng-model="email" type="email" placeholder="somebody@example.com" required autofocus>
+        </label>
+        <hr>
+        <h5>Presentation</h5>
       <label>
         Please enter 4 keywords that describe your presentation
-        <textarea rows="2"></textarea>
+        <textarea ng-model="keywords" rows="2"></textarea>
       </label>
 
       <label>
         Please enter a brief description of your presentation <br /> (2 sentences)
-        <textarea rows="4"></textarea>
+        <textarea ng-model="description" rows="4"></textarea>
       </label>
 
       <label>
         Please enter an abstract of your presentation<br />(250 word maximum)
-        <textarea rows="10"></textarea>
+        <textarea ng-model="abstract" rows="10"></textarea>
 <!--
      ng-controller="wordController as wordController"
         <textarea ng-model="wordController.Text" ng-change="wordController.UpdateLengths()" rows="10"></textarea>
