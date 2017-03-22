@@ -14,11 +14,11 @@ angular.module('drsApp.reviewerApplication');
     firebaseRef.child("lastName").set($scope.lastName);
     console.log("lastName: "+ $scope.lastName);
     firebaseRef.child("university").set($scope.university);
-    console.log("university"+ $scope.university);
-//    firebaseRef.child("education").set($scope.education);
-    console.log("education: "+ $scope.education);
-//    firebaseRef.child("discipline").set($scope.discipline);
-    console.log("discipline: "+ $scope.discipline);
+    console.log("university: "+ $scope.university);
+//    firebaseRef.child("education").set($scope.selectedEducation);
+    console.log("education: "+ $scope.selectedEducation);
+//    firebaseRef.child("discipline").set($scope.selectedDiscipline);
+    console.log("discipline: "+ $scope.seledtedDiscipline);
 //    firebaseRef.child("selectedExpertise").set($scope.selectedExpertise);
     console.log("selectedExpertise: "+ $scope.selectedExpertise);
     firebaseRef.child("streetAddress1: ").set($scope.streetAddress1);
@@ -60,4 +60,91 @@ angular.module('drsApp.reviewerApplication');
     $scope.email = '';
   }
 
+};
+
+app.controller('educationController', educationController)
+function educationController($scope){
+  $scope.degrees=[
+    "Bachelor Degree",
+    "Master Degree",
+    "Doctorate Degree"
+  ]
+};
+
+app.controller('disciplineController', disciplineController)
+
+function disciplineController($scope){
+  $scope.disciplines=[
+    "Agriculture",
+    "Anthropology",
+    "Applied Mathematics",
+    "Archaeology",
+    "Architecture and design",
+    "Area studies",
+    "Arts",
+    "Biology",
+    "Business",
+    "Chemistry",
+    "Computer sciences",
+    "Cultural and ethnic studies",
+    "Divinity",
+    "Earth sciences",
+    "Economics",
+    "Education",
+    "Engineering and technology",
+    "Environmental studies and forestry",
+    "Family and consumer science",
+    "Formal sciences",
+    "Gender and sexuality studies",
+    "Geography",
+    "Human history",
+    "Human physical performance and recreation",
+    "Humanities",
+    "Intelligence",
+    "Journalism, media studies and communication",
+    "Law",
+    "Library and museum studies",
+    "Linguistics",
+    "Literature",
+    "Logic",
+    "Mathematics",
+    "Medicine",
+    "Military sciences",
+    "Natural sciences",
+    "Philosophy",
+    "Physics",
+    "Political science",
+    "Psychology",
+    "Public administration",
+    "Public policy",
+    "Pure Mathematics",
+    "Religion",
+    "Social sciences",
+    "Social work",
+    "Sociology",
+    "Space sciences",
+    "Statistics",
+    "Systems science",
+    "Transportation",
+    "Other"
+  ]
+};
+
+app.controller('expertiseController', expertiseController)
+
+function expertiseController($scope){
+  $scope.expertises=[
+    "Access and success of underrepresented groups",
+    "Campus climate and inter-group relations",
+    "Community Outreach",
+    "Education and scholarship",
+    "Institutional viability and vitality",
+    "Interdisciplinary research on diversity and interdisciplinary topics",
+    "Mentoring",
+    "Privilege, power, marginalization, discrimination, and difference",
+    "Research",
+    "Scholarship",
+    "Teaching",
+    "---OTHER (SPECIFY):"
+  ]
 };

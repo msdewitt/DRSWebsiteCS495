@@ -1,6 +1,6 @@
 <div id="reviewerDiv"class="medium-7 medium-centered large-9 large-centered columns" ng-controller="reviewAppController">
 
-  <form name="reviewerApplication" id="reviewerAppDiv"ng-submit="submitRevApp()">
+  <form name="reviewerApplication" id="reviewerAppDiv" ng-submit="submitRevApp()">
     <div class="reviewer-application">
       <h4 class="text-center"><strong>Sign Up to become a proposal reviewer</strong></h4>
       <br>
@@ -20,7 +20,7 @@
 
       <label ng-controller="educationController">
         select your level of education
-        <select ng-model="selectedEducation" ng-options="education for education in degrees" required>
+        <select ng-model="selectedEducation" ng-options="education for education in degrees track by degrees" required>
         </select>
       </label>
 
@@ -34,7 +34,7 @@
         Select your area of expertise or interest
         <select ng-model="selectedExpertise" ng-options="expertise for expertise in expertises" required>
 <!--
-        <div ng-if="selectedExpertise == '---OTHER (SPECIFY):'">
+        <div ng-if="selectedExpertise == 'OTHER (SPECIFY):'">
           <label>Please specify other:
             <input type="text" autofocus>
           </label>
@@ -69,11 +69,11 @@
         </label>
         <hr>
         <h5>Contact</h5>
-        <label>Cell
-          <input ng-model="phone1" type="text" autofocus>
+        <label>Phone
+          <input ng-model="phone1" type="text" autofocus required>
         </label>
 
-        <label>Home phone
+        <label>Alternative phone
           <input ng-model="phone2" type="text" autofocus>
         </label>
 
