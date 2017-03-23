@@ -15,6 +15,7 @@ var app = angular.module('drsApp.reviewerApplication');
     var user = firebase.auth().currentUser;
     var users = firebase.database().ref("users");
 
+    if(user){
     users.orderByChild('uid').equalTo(user.uid).on('child_added', function(snapshot) {
 
     var message = snapshot.val();
@@ -22,7 +23,10 @@ var app = angular.module('drsApp.reviewerApplication');
     // id = user.uid;
     // console.log(message + ": "+ id);
     });
-
+  }else{
+    id = " "
+    console.log("Login error");
+  }
 
   $scope.submitRevApp = function(users) {
     console.log("ID Key: "+ id);
