@@ -294,3 +294,6 @@ body:before {
 #reviewerAppDiv{
   padding: 10px;
 }
+#expertiseOther {
+  display: none;
+}
