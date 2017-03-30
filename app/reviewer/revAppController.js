@@ -11,6 +11,7 @@ var app = angular.module('drsApp.reviewerApplication');
   reviewAppController.$inject = ['$scope','$firebaseArray'];
 
   function reviewAppController($scope, $firebaseArray){
+/*
     var id = "";
     var user = firebase.auth().currentUser;
     var users = firebase.database().ref("users");
@@ -27,9 +28,11 @@ var app = angular.module('drsApp.reviewerApplication');
     id = " "
     console.log("Login error");
   }
+*/
+
 
   $scope.submitRevApp = function(users) {
-    console.log("ID Key: "+ id);
+//    console.log("ID Key: "+ id);
 
 
 
@@ -39,9 +42,23 @@ var app = angular.module('drsApp.reviewerApplication');
 
 
 
-//
-// console.log($scope.discipline);
-// console.log($scope.education);
+  console.log($scope.selectedExpertise);
+  console.log($scope.selectedDiscipline);
+  console.log($scope.selectedEducation);
+
+  var selectD = document.getElementById("selectedDiscipline");
+  var indexD = selectD.selectedIndex;
+  $scope.selectedDiscipline = selectD[indexD].label;
+
+  var selectEx = document.getElementById("selectedExpertise");
+  var indexEx = selectEx.selectedIndex;
+  $scope.selectedExpertise = selectEx[indexEx].label;
+
+  var selectEd = document.getElementById("selectedEducation");
+  var indexEd = selectEd.selectedIndex;
+  $scope.selectedEducation = selectEd[indexEd].label;
+
+/*
 var specificUser = firebaseRef.child('users').child(id);
 var admin = specificUser.child('admin');
 if(specificUser.child('presenter') == true){
@@ -94,7 +111,7 @@ specificUser.set({
 
 //
 // user.updateEmail($scope.email);
-
+*/
 };
 };
 

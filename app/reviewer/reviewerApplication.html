@@ -4,7 +4,7 @@
     <div class="reviewer-application">
       <h4 class="text-center"><strong>Sign Up to become a proposal reviewer</strong></h4>
       <br>
-
+<!--
       <label for="firstName"> First name
         <input ng-model="firstName" type="text" name="firstName" maxlength="20"  required autofocus>
       </label>
@@ -17,35 +17,31 @@
       <label>University or place of employment
         <input ng-model="university" type="text"  required autofocus>
       </label>
-
+-->
       <label ng-controller="educationController">
         select your level of education
-
-        <select ng-model="selectedEducation" ng-options="education for education in degrees" >
-
-        <select ng-model="selectedEducation" ng-options="education for education in degrees track by degrees" required>
-
+        <select ng-model="selectedEducation" id="selectedEducation" ng-options="education for education in degrees" required>
         </select>
       </label>
 
       <label ng-controller="disciplineController">
         Select your discipline
-        <select ng-model="selectedDiscipline" ng-options="discipline for discipline in disciplines" >
+        <select ng-model="selectedDiscipline" id="selectedDiscipline" ng-options="discipline for discipline in disciplines" >
         </select>
       </label>
 
       <label ng-controller="expertiseController">
         Select your area of expertise or interest
-        <select ng-model="selectedExpertise" ng-options="expertise for expertise in expertises" >
-<!--
-        <div ng-if="selectedExpertise == 'OTHER (SPECIFY):'">
-          <label>Please specify other:
-            <input type="text" autofocus>
-          </label>
-        </div>
--->
+        <select ng-model="selectedExpertise" id="selectedExpertise" ng-options="expertise for expertise in expertises" >
         </select>
       </label>
+
+      <div id="expertiseOther">
+        <label>Please specify other:
+          <input type="text" autofocus>
+        </label>
+      </div>
+<!--
       <hr>
         <h5>Address</h5>
         <label>Street address
@@ -85,7 +81,7 @@
         <label>Email
           <input ng-model="email" type="email" placeholder="somebody@example.com"  required autofocus>
         </label>
-
+-->
         <div class="large-2 medium-3">
           <p><button type="submit" class="button expanded">Register</button></p>
           <p><input type="button" ng-click="reset()" value="Reset" /></p>
