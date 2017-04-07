@@ -29,13 +29,24 @@ var app = angular.module('drsApp.reviewerApplication');
     console.log("Login error");
   }
 
+// object.onchange = function(){myScript};
+  document.getElementById("selectedExpertise").onchange = function(){
+    var selectEx = document.getElementById("selectedExpertise");
+    var indexEx = selectEx.selectedIndex;
+    $scope.selectedExpertise = selectEx[indexEx].label;
 
+    if ($scope.selectedExpertise === "---OTHER (SPECIFY):") {
+      document.getElementById("expertiseOther").style.display = "block";
+    }
+  }
 
+  $scope.reset = function () {
+    console.log("in reset");
+    location.reload();
+  }
+  
   $scope.submitRevApp = function(users) {
 //    console.log("ID Key: "+ id);
-
-
-
 
     var firebaseRef = firebase.database().ref();
 
@@ -43,18 +54,17 @@ var app = angular.module('drsApp.reviewerApplication');
   var indexD = selectD.selectedIndex;
   $scope.selectedDiscipline = selectD[indexD].label;
 
-  var selectEx = document.getElementById("selectedExpertise");
-  var indexEx = selectEx.selectedIndex;
-  $scope.selectedExpertise = selectEx[indexEx].label;
-
   var selectEd = document.getElementById("selectedEducation");
   var indexEd = selectEd.selectedIndex;
   $scope.selectedEducation = selectEd[indexEd].label;
 
+  if ($scope.selectedExpertise === "---OTHER (SPECIFY):") {
+    $scope.selectedExpertise = document.getElementById("otherText").value;
+  }
 
-    console.log($scope.selectedExpertise);
-    console.log($scope.selectedDiscipline);
-    console.log($scope.selectedEducation);
+    console.log("ex: " + $scope.selectedExpertise);
+    console.log("dis: " + $scope.selectedDiscipline);
+    console.log("ed: " + $scope.selectedEducation);
 
 
 var specificUser = firebaseRef.child('users').child(id);
@@ -178,7 +188,6 @@ function disciplineController($scope){
     "Other"
   ]
 };
-
 
 function expertiseController($scope){
   $scope.expertises=[
